@@ -9,6 +9,7 @@ class Post extends Model
 {
     use HasFactory;
 
+    const TABLE = 'posts';
     protected $fillable = [
         'body', 'title',
     ];

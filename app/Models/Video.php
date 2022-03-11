@@ -9,6 +9,7 @@ class Video extends Model
 {
     use HasFactory;
 
+    const TABLE = 'videos';
     protected $fillable = ['title', 'url'];
 
     public function comments(): \Illuminate\Database\Eloquent\Relations\MorphMany
