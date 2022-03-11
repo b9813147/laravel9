@@ -10,4 +10,9 @@ class Video extends Model
     use HasFactory;
 
     protected $fillable = ['title', 'url'];
+
+    public function comments(): \Illuminate\Database\Eloquent\Relations\MorphMany
+    {
+        return $this->morphMany(Comment::class, 'commentable');
+    }
 }

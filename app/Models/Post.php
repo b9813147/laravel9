@@ -12,4 +12,9 @@ class Post extends Model
     protected $fillable = [
         'body', 'title',
     ];
+
+    public function comments(): \Illuminate\Database\Eloquent\Relations\MorphMany
+    {
+        return $this->morphMany(Comment::class, 'commentable');
+    }
 }
