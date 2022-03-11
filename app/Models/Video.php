@@ -2,12 +2,13 @@
 
 namespace App\Models;
 
+use App\helpers\Relationship\HasTags;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Video extends Model
 {
-    use HasFactory;
+    use HasFactory, HasTags;
 
     const TABLE = 'videos';
     protected $fillable = ['title', 'url'];

@@ -2,12 +2,13 @@
 
 namespace App\Models;
 
+use App\helpers\Relationship\HasTags;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    use HasFactory;
+    use HasFactory, HasTags;
 
     const TABLE = 'posts';
     protected $fillable = [
